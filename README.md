@@ -2,13 +2,14 @@
 
 ## What is Devyzer
 
-Devyzer aims to be like a bot developer and dev-ops engineer  in your team to do recurrent and redudend  tasks, learn from you and your team's way code to enhance its code and help find solution for your problems using AI technologies.
+Devyzer plays the role of a developer and dev-ops engineer in your team that will handle recurrent and redundant tasks. The Devyzer bot learns from you and your team's coding style to enhance its code and help find solutions for your problems using AI technologies.
 
 ## Features
 
-* Support Laravel Php with multiple boilerplates of high quality code, and support other frameworks and languages are on the way.
-* Generate CRUD views an api's with  a wide and deep support to details of these CRUD's such as different relationship types, control what to generate, generate api's with swagger docs, graphql schema's and test units 
-* full deployment of  your project in no-time to devyzer's cloud or your own servers!.
-* ability to work in parallel with your own code, so devyzer can ask devyzer at any time of your project development cycle to devyze a functionality for you \(currently just a CRUDS\) and then you can merge it into your active working branch
-* Support multiple channels to act to devyzer, from project's web dashboard, console/terminal/cli,  slack and even by talking google now 
+* Supports Laravel php with multiple high quality boilerplates code. Support for other frameworks and platforms are on the way.
+* Generates CRUD views and API's with all the perks that come with them. Such as Swagger docs, GraphQL Schema's, Test units and much more. 
+* Full deployment of your project to devyzer's cloud or your own servers in minimal time!
+* Devyzer works along with the developer with complete ease, causing no conflicts, and contributing to a development cycle along the way.
+* The "Devyze" feature will help create code with custom functionalities \(currently just CRUDs\), and once ready, the code can be merged it into the active working branch.
+* Supports multiple communication channels other than our main bot, such as the web dashboard, console/terminal/cli, slack or by just sending voice commands to google now. 
 
