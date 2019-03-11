@@ -1,75 +1,75 @@
 ---
-description: this page describes the schema configurations of entity object.
+description: This page describes the schema configurations of an entity object.
 ---
 
 # Entity
 
-**Entities**: 
+#### **Entities**: 
 
-every entity contains the following attributes:
+Every entity contains the following attributes:
 
-* name:  entity name.
-* model: model name.
-* table:table name.
-* briefTitle:  entity title.
-* fields: entity fields.
-* relations:entity relations.
-* extraProperties: detecting other properties such as: softDelete, metable ...etc.
-* generation: can detect files that Devyzer will generate them.
-* inherit: can inheriting entity from snippets.
-
-
-
-_**Fields**_ : 
-
-every field contains the following attributes:
-
-* title: field title
-* name: field name
-* dbType: contains the following attributes: 
-  * type: one of these [types](https://www.tkserver.com/laravel-database-column-types).
-  * primary: is primary or not.
-  * default: a default value
-  * foreign: if this field is a foreign, must detect  the following attributes: 
-    * name: name of relation.
-    * relatedEntity: name of related entity
-    *  fieldView: the field that you want to view it in the related entity.
-* viewType: contains the following attributes:
-  *  type : one of  `Integer`,`text`,`textarea`,`password`,`hidden`, `date`, `select`, `ckeditor` , `token`, `Image`
-  *  enums: if this field is an enum, must detect a list of the following attributes: 
-    * label.
-    * value. 
-* searchable: specifies whether the field is searchable or not.
-* fillable: specifies whether the field is fillable or not.
-* sortable: specifies whether the field is sortable or not.
-* inForm: specifies whether the field is an input field or not.
-* inIndex: specifies whether the field will appear in index page \(list\) or not.
-* inView: specifies whether the field will appear in view page or not.
+* **name**:  _entity name_
+* **model**:  _model name_
+* **table**:  _table name_
+* **briefTitle**:  _entity title_
+* **fields**:  _entity fields_
+* **relations**:  _entity relations_
+* **extraProperties**:  entity [_extra options_](entity.md#extra-properties)\_\_
+* **generation**:  customize [devyzed code](entity.md#generation)
+* **inherit**:  _can inherit an entity from a external entity list_
 
 
 
-_**Relations**_: 
+#### **Fields**: 
 
-every relation contains the following attributes:
+Every field contains the following attributes:
 
-* name: relation name
-* relation: contains the following attributes: 
-  * type: `mtm`, `1tm`.
-  * relatedEntity: name of the related entity.
-  * middleEntity : name of the middle entity
-  * pivotFields : array of middle entity fields.
-  * fieldView: the field that you want to view it in the related entity
-  * foreignKey: name of foreign Key field for current entity.
-  * otherKey: name of foreign Key field for related entity.
-* inForm: specifies whether the relation is input  or not.
-* inIndex: specifies whether the relation will appear in list page or not.
-* inView: specifies whether the relation will appear in view page or not.
+* **title**:  _field title_
+* **name**:  _field name_
+* **dbType**:  _contains the following attributes_
+  * **type**:  _one of these_ [_types_](https://www.tkserver.com/laravel-database-column-types)
+  * **primary**:  _is primary or not_
+  * **default**:  _a default value_
+  * **foreign**:  _if this field is a foreign key, the following attributes must be defined_
+    * **name**:  _name of the relation_
+    * **relatedEntity**:  _name of the related entity_
+    * **fieldView**:  ~~_the field that you want to view in the related entity_~~
+* **viewType**:  _contains the following attributes_
+  *  **type**:  _one of_  `integer`, `text`, `textarea`, `password`, `hidden`, `date`, `select`, `ckeditor`, `token`, `image`
+  *  **enums**:  _if this field is an enum, the following attributes must be defined_
+    * **label**
+    * **value**
+* **searchable**:  _specifies whether the field is searchable or not_
+* **fillable**:  _specifies whether the field is fillable or not_
+* **sortable**:  _specifies whether the field is sortable or not_
+* **inForm**:  _specifies whether the field is an input field or not_
+* **inIndex**:  _specifies whether the field will appear in index page \(list\) or not_
+* **inView**:  _specifies whether the field will appear in view page or not_
 
 
 
-_**Extra Properties**:_  
+#### **Relations**: 
 
-contains the following attributes:
+Every relation contains the following attributes:
+
+* **name**:  _relation name_
+* **relation**:  _contains the following attributes_
+  * **type**: `mtm`, `1tm`
+  * **relatedEntity**:  _name of the related entity_
+  * **middleEntity**:  _name of the middle entity_
+  * **pivotFields**:  _array of middle entity fields_
+  * **fieldView**:  ~~_the field that you want to view it in the related entity_~~
+  * **foreignKey**:  _foreign Key field  of the current entity_
+  * **otherKey**:  _foreign Key field of the related entity_
+* **inForm**:  _specifies whether the relation is input or not_
+* **inIndex**:  _specifies whether the relation will appear in list page or not_
+* **inView**:  _specifies whether the relation will appear in view page or not_
+
+
+
+#### **Extra Properties**:  __
+
+Contains the following attributes:
 
 * softdelete: `true`, `false`
 * metable: `true`, `false`
@@ -79,28 +79,26 @@ contains the following attributes:
 
 
 
-_**Generation**_: 
+#### **Generation**: 
 
- every attribute in generation detect if Devyzer will generate  appropriate file or not, and it contains the following attributes:
+The following attributes will customizes the code generated by Devyzer for the current entity:
 
-* model : `true`, `false`
-* createEvent : `true`, `false`
-* updateEvent : `true`, `false`
-* deleteEvent : `true`, `false`
-* listener : `true`, `false`
-* repository : `true`, `false`
-* createTable : `true`, `false`
-* createRequest : `true`, `false`
-* updateRequest : `true`, `false`
-* controller : `true`, `false`
-* route : `true`, `false`
-* breadcrumbs : `true`, `false`
-* lang : `true`, `false`
-* view : `true`, `false`
-* apiCreateRequest : `true`, `false`
-* apiUpdateRequest : `true`, `false`
-* apiController : `true`, `false`
-* apiRoute : `true`, `false`  
-
-
+* **model**: `true`, `false`
+* **createEvent**: `true`, `false`
+* **updateEvent**: `true`, `false`
+* **deleteEvent**: `true`, `false`
+* **listener**: `true`, `false`
+* **repository**: `true`, `false`
+* **createTable**: `true`, `false`
+* **createRequest**: `true`, `false`
+* **updateRequest**: `true`, `false`
+* **controller**: `true`, `false`
+* **route**: `true`, `false`
+* **breadcrumbs**: `true`, `false`
+* **lang**: `true`, `false`
+* **view**: `true`, `false`
+* **apiCreateRequest**: `true`, `false`
+* **apiUpdateRequest**: `true`, `false`
+* **apiController**: `true`, `false`
+* **apiRoute**: `true`, `false`
 

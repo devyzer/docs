@@ -1,14 +1,12 @@
 ---
-description: this page describes the schema configurations of field object.
+description: This page describes the schema configurations of the field object.
 ---
 
 # Field
 
-You can distinguish between different types of fields and types:
+You can distinguish between the different types of fields and types:
 
-
-
-**Id**:
+**id**:
 
 ```text
 {
@@ -22,7 +20,7 @@ You can distinguish between different types of fields and types:
 
 ```
 
-**Integer**: 
+**integer**: 
 
 ```text
 {
@@ -30,16 +28,14 @@ You can distinguish between different types of fields and types:
    "title": "Integer Value",
    "name": "field_name",
         "dbType": {
-          "type": "Integer",
+          "type": "integer",
         },
         "viewType": {
-          "type": "Integer"
+          "type": "integer"
         },
 }
 
 ```
-
-
 
 **double**:
 
@@ -55,8 +51,6 @@ You can distinguish between different types of fields and types:
     },
   }
 ```
-
-
 
 **default**:
 
@@ -74,8 +68,6 @@ You can distinguish between different types of fields and types:
  }
 ```
 
-
-
 **foreign**:
 
 ```text
@@ -85,7 +77,7 @@ You can distinguish between different types of fields and types:
       "dbType": {
         "type": "Integer",
         "foreign": {
-            "name":"relation name"
+            "name": "relation name"
             "relatedEntity": "related entity name",
             "fieldView": "field_name",
          ...
@@ -97,8 +89,6 @@ You can distinguish between different types of fields and types:
     .....
     }
 ```
-
-
 
 **enum**:
 
@@ -113,11 +103,11 @@ You can distinguish between different types of fields and types:
           "enums": [
             {
               "label": "Label Value1",
-              "value": "val1"
+              "value": "value1"
             },
             {
               "label": "Label Value2",
-              "value": "val2"
+              "value": "value2"
             }
             {
             ....
@@ -128,31 +118,30 @@ You can distinguish between different types of fields and types:
       }
 ```
 
-\*\*\*\*
-
 **validations**:
 
-required, max, min, unique,date and file :
+Available options are: required, max, min, unique, date and file
 
 * ```text
-     "validations": "required|...", 
+  "validations": "required|...", 
   ```
 * ```text
-   "validations": "max:max_value|...",
+  "validations": "max:max_value|...",
   ```
 * ```text
-    "validations": "min:min_value|...",
+  "validations": "min:min_value|...",
   ```
 * ```text
-    "validations": "unique:tabel_name|...",
+  "validations": "unique:tabel_name|...",
   ```
 * ```text
-    "validations": "date|...",
+  "validations": "date|...",
   ```
 * ```text
-    "validations": "file|...",
+  "validations": "file|...",
   ```
-* for more validations see [this](https://laravel.com/docs/5.7/validation#rule-same)
+
+_For more validations, check_ [_this link_](https://laravel.com/docs/5.7/validation#rule-same)\_\_
 
 **searchable**:
 
@@ -184,7 +173,7 @@ required, max, min, unique,date and file :
    }
 ```
 
-**in form**:
+**inForm**:
 
 ```text
   { 
@@ -194,7 +183,7 @@ required, max, min, unique,date and file :
    }
 ```
 
-**in index**:
+**inIndex**:
 
 ```text
   { 
@@ -204,7 +193,7 @@ required, max, min, unique,date and file :
    }
 ```
 
-**in view**:
+**inView**:
 
 ```text
   { 
@@ -214,7 +203,7 @@ required, max, min, unique,date and file :
    }      
 ```
 
-**view type**:
+**viewType**:
 
 * ```text
   "viewType": {
@@ -233,17 +222,17 @@ required, max, min, unique,date and file :
   ```
 * ```text
   "viewType": {
-        "type": "hidden"
+     "type": "hidden"
   }
   ```
 * ```text
   "viewType": {
-    "type": "email"
+     "type": "email"
   }
   ```
 * ```text
   "viewType": {
-        "type": "date"
+     "type": "date"
   }
   ```
 * ```text
@@ -258,13 +247,13 @@ required, max, min, unique,date and file :
   ```
 * ```text
   "viewType": {
-        "type": "token"
+     "type": "token"
   }
   ```
 * ```text
   "viewType": {
-    "type": "img"
-    },
+     "type": "img"
+  },
   ```
 
 
