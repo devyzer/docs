@@ -107,7 +107,7 @@ Example:
         "type": "1tm",
         "relatedEntity": "related entity name",
         "fieldView": "view field in related entity",
-        "foreignKey": "foreign Key for current entity"
+        "foreignKey": "foreign Key of the current entity"
     },
     "inForm": false,
     "inView": true,
@@ -147,7 +147,7 @@ It is enough to define the foreign keys fields
 
 ```text
 {
-    "title": "field Name",
+    "title": "Field Name",
     "name": "field_id",
     "dbType": {
         "type": "integer",
