@@ -33,7 +33,7 @@ Every field contains the following attributes:
   * **foreign**:  _if this field is a foreign key, the following attributes must be defined_
     * **name**:  _name of the relation_
     * **relatedEntity**:  _name of the related entity_
-    * **fieldView**:  ~~_the field that you want to view in the related entity_~~
+    * **fieldView**:  _the field that you want to view in the related entity_
 * **viewType**:  _contains the following attributes_
   *  **type**:  _one of_  `integer`, `text`, `textarea`, `password`, `hidden`, `date`, `select`, `ckeditor`, `token`, `image`
   *  **enums**:  _if this field is an enum, the following attributes must be defined_
@@ -58,7 +58,7 @@ Every relation contains the following attributes:
   * **relatedEntity**:  _name of the related entity_
   * **middleEntity**:  _name of the middle entity_
   * **pivotFields**:  _array of middle entity fields_
-  * **fieldView**:  ~~_the field that you want to view it in the related entity_~~
+  * **fieldView**:  _the field that you want to view it in the related entity_
   * **foreignKey**:  _foreign Key field  of the current entity_
   * **otherKey**:  _foreign Key field of the related entity_
 * **inForm**:  _specifies whether the relation is input or not_
